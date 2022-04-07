@@ -1,0 +1,7 @@
+TODO*
+
+*.exe
+*.out
+
+bin/
+obj/
