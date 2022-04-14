@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#if !defined(TC_H)
-#define TC_H
+#if !defined(TC_COLOR)
+#define TC_COLOR
 
 #define TC_NORM "\x1B[0m"
 #define TC_RED "\x1B[1;31m"
@@ -21,9 +21,9 @@
 #define TC_B_CYAN "\x1B[0;36m"
 #define TC_B_WHITE "\x1B[0;37m"
 
-#endif // TC_H
-
 void color_display(char *args, char *color)
 {
     printf("%s%s%s", color, args, TC_NORM);
 }
+
+#endif // TC_COLOR
