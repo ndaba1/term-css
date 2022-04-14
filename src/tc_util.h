@@ -1,0 +1,1 @@
+#define tc_clear_screen() puts("\x1B[23")
