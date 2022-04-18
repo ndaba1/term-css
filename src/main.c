@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <string.h>
+#include "tc_color.h"
+#include "tc_util.h"
+#include "tc_cursor.h"
 
-
-int main(int argc, char* argv) 
+int main(int argc, char *argv)
 {
+	int cols, rows;
+	tc_get_cols_rows(&cols, &rows);
 
-	int cursor_pstn = 1;
+	tc_move_cursor((cols - 12) / 2, rows / 2);
+	color_display("Hello world", TC_RED);
 
-	while(cursor_pstn < 100) 
-	{
-		printf(" ");
-
-		cursor_pstn++;
-	};
-
-}			
+	return 0;
+}
